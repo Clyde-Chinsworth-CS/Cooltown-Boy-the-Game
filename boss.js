@@ -56,12 +56,12 @@ Boss.prototype.move = function () {
                         this.attacks++
                             this.ang = angleDeg
                     }
-                    this.x += -Math.cos(this.ang * Math.PI / 180) * 20
-                    this.y += -Math.sin(this.ang * Math.PI / 180) * 20
+                    this.x += -Math.cos(this.ang * Math.PI / 180) * 18
+                    this.y += -Math.sin(this.ang * Math.PI / 180) * 18
                     this.frames = 0
                     if (dist(player.x, player.y, this.x, this.y) < this.h / 2 + player.h / 2) {
                         if (frames8 > 30) {
-                            player.hp -= 2 
+                            player.hp -= 2
                             frames7 = 21
                             frames8 = 0
                         }
@@ -83,11 +83,20 @@ Boss.prototype.move = function () {
                         line(this.oldx, this.oldy, this.x, this.y)
                     }
                     if (this.attacks >= 7) {
+                        if (this.frames > 60) {
+                            this.x += Math.random()
+                            this.x -= Math.random()
+                            this.y += Math.random()
+                            this.y -= Math.random()
+                        }
                         if (this.frames > 119) {
                             this.attacks = 0
                         }
                     }
                     if (this.attacks >= 4 && this.attacks < 7) {
+                        if (this.frames > 20) {
+                            this.col = "#42E7E8"
+                        }
                         if (this.frames > 40) {
                             this.array.push(new BBullet(this.x, this.y))
                             this.frames = 0
