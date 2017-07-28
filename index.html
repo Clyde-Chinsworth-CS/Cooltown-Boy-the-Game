@@ -5,13 +5,25 @@
     <title>Bubulafula</title>
 
     <script src="p5.js"></script>
-    <script src="commands.js"></script>
-    <script src="objects.js"></script>
+    <script src="player.js"></script>
     <script src="sketch.js"></script>
+    <script src="enemy1.js"></script>
+    <script src="enemy2.js"></script>
+    <script src="enemy3.js"></script>
+    <script src="enemy4.js"></script>
+    <script src="enemy5.js"></script>
+    <script src="enemy6.js"></script>
+    <script src="boss.js"></script>
+    <script src="levels.js"></script>
 
 
 
     <style>
+        @font-face {
+            font-family: font;
+            src: url(data/Squared%20Display.ttf);
+        }
+        
         body {
             text-align: center;
             background-color: black;
@@ -19,7 +31,9 @@
         }
         
         p {
-            color: aqua
+            font-size: 22px;
+            font-family: font;
+            color: white;
         }
         
         .noselect {
@@ -42,8 +56,7 @@
 </head>
 
 <body class="noselect" oncontextmenu="return false;">
-    <img src="/data/art.png" alt="art" height="350" width="500">
-    <p class="noselect">cooltown boy: the game</p>
+    <p>CoolTown Boy: The videogame</p>
 </body>
 
 </html>
