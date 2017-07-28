@@ -64,7 +64,11 @@ Enemy6.prototype.move = function () {
         };
 
         var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
         if (player.hp > 0) {
             if (this.frames < 43) {
                 this.ang = angleDeg
@@ -80,8 +84,13 @@ Enemy6.prototype.move = function () {
                 if (dist(player.x, player.y, this.x, this.y) < this.h / 2 + player.h / 2) {
                     if (frames8 > 30) {
                         player.hp--
+<<<<<<< HEAD
                             frames7 = 21
                         frames8 = 0
+=======
+                        frames7 = 21
+                            frames8 = 0
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
                     }
                 }
             } else if (player.hp == 0) {
@@ -161,12 +170,15 @@ Enemy6.prototype.hitDetect = function () { // detects if object is hit by player
     var angleEne = Math.atan2(p2.y - p3.y, p2.x - p3.x) * 180 / Math.PI
     var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
 
+<<<<<<< HEAD
     if (angleDeg > 0 && angleEne < 0) {
         angleEne = -angleEne
     } else if (angleEne > 0 && angleDeg < 0) {
         angleDeg = -angleDeg
     }
 
+=======
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
     if (frames2 == 1) {
         if (dist(this.x, this.y, player.x, player.y) <= this.h / 2 + 55) { // sword
             if (angleEne < angleDeg + 85 && angleEne > angleDeg - 85) {

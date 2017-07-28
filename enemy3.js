@@ -94,7 +94,11 @@ Enemy3.prototype.move = function () {
 
     Enemy3.prototype.show = function () {
         ellipse(this.x, this.y, this.h)
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
         stroke("#f533ff") // health bar for enemy
         fill("#BD1E6E")
         rect(this.x - 11.5, this.y + 19.25, 22, 13)
@@ -162,6 +166,7 @@ Enemy3.prototype.hitDetect = function () { // detects if object is hit by player
     var angleEne = Math.atan2(p2.y - p3.y, p2.x - p3.x) * 180 / Math.PI
     var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
 
+<<<<<<< HEAD
     if (angleDeg > 0 && angleEne < 0) {
         angleEne = -angleEne
     } else if (angleEne > 0 && angleDeg < 0) {
@@ -169,6 +174,9 @@ Enemy3.prototype.hitDetect = function () { // detects if object is hit by player
     }
 
     if (frames2 == 0 || frames2 == 1) {
+=======
+    if (frames2 == 0 || frames2 == 1 ) {
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
         if (dist(this.x, this.y, player.x, player.y) <= this.h / 2 + 55) { // sword
             if (angleEne < angleDeg + 85 && angleEne > angleDeg - 85) {
                 this.hp--

@@ -621,7 +621,11 @@ function initialize() {
 
     if (stage == 34) { // stage thirty four 
         if (enemies.length == 0) {
+<<<<<<< HEAD
             screen("you thought that last one was fun", "oh boy")
+=======
+            screen("that was fun", "this one is too")
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
             if (keyIsDown(82)) { // stage thirty five enemy spawner
                 stage++
                 stagecount++

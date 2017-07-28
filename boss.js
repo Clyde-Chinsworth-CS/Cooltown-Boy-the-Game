@@ -83,11 +83,26 @@ Boss.prototype.move = function () {
                         line(this.oldx, this.oldy, this.x, this.y)
                     }
                     if (this.attacks >= 7) {
+<<<<<<< HEAD
+=======
+                        if (this.frames > 60) {
+                            this.x += Math.random()
+                            this.x -= Math.random()
+                            this.y += Math.random()
+                            this.y -= Math.random()
+                        }
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
                         if (this.frames > 119) {
                             this.attacks = 0
                         }
                     }
                     if (this.attacks >= 4 && this.attacks < 7) {
+<<<<<<< HEAD
+=======
+                        if (this.frames > 20) {
+                            this.col = "#42E7E8"
+                        }
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
                         if (this.frames > 40) {
                             this.array.push(new BBullet(this.x, this.y))
                             this.frames = 0
@@ -180,17 +195,25 @@ Boss.prototype.hitDetect = function () { // detects if object is hit by player
         y: this.y
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
     this.col = "black"
 
     var angleEne = Math.atan2(p2.y - p3.y, p2.x - p3.x) * 180 / Math.PI
     var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
 
+<<<<<<< HEAD
     if (angleDeg > 0 && angleEne < 0) {
         angleEne = -angleEne
     } else if (angleEne > 0 && angleDeg < 0) {
         angleDeg = -angleDeg
     }
 
+=======
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
     if (frames2 == 1) {
         if (dist(this.x, this.y, player.x, player.y) <= this.h / 2 + 55) { // sword
             if (angleEne < angleDeg + 85 && angleEne > angleDeg - 85) {

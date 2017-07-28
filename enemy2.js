@@ -112,6 +112,7 @@ Enemy2.prototype.hitDetect = function () { // detects if object is hit by player
         x: this.x,
         y: this.y
     }
+<<<<<<< HEAD
 
     this.col = "#4A5E73"
 
@@ -124,6 +125,14 @@ Enemy2.prototype.hitDetect = function () { // detects if object is hit by player
         angleDeg = -angleDeg
     }
 
+=======
+    
+    this.col = "#4A5E73"
+    
+    var angleEne = Math.atan2(p2.y - p3.y, p2.x - p3.x) * 180 / Math.PI
+    var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
     if (frames2 == 1) {
         if (dist(this.x, this.y, player.x, player.y) <= this.h / 2 + 55) { // sword
             if (angleEne < angleDeg + 85 && angleEne > angleDeg - 85) {

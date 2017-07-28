@@ -16,9 +16,15 @@ Enemy4.prototype.move = function () {
     this.collDetect(player)
     this.frames++
 
+<<<<<<< HEAD
         if (dist(player.x, player.y, this.x, this.y) > 100) {
             this.inRange = false
         }
+=======
+    if (dist(player.x, player.y, this.x, this.y) > 100) {
+        this.inRange = false
+    }
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
 
     if (this.frames > 120) {
         if (dist(player.x, player.y, this.x, this.y) < 100) { // resets framecount if player is in range, triggering attack 
@@ -50,12 +56,21 @@ Enemy4.prototype.move = function () {
     }
 
     Enemy4.prototype.show = function () {
+<<<<<<< HEAD
 
 
         fill(this.col)
         this.col = "#383838"
         ellipse(this.x, this.y, this.h)
 
+=======
+        
+        
+        fill(this.col)
+        this.col = "#383838"
+        ellipse(this.x, this.y, this.h)
+    
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
         fill("#BD1E6E")
         rect(this.x - 15, this.y + 25, 30, 13)
         fill("#f533ff")
@@ -105,6 +120,7 @@ Enemy4.prototype.hitDetect = function () { // detects if object is hit by player
     stroke(this.str)
 
     var angleEne = Math.atan2(p2.y - p3.y, p2.x - p3.x) * 180 / Math.PI
+<<<<<<< HEAD
     var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI
 
     if (angleDeg > 0 && angleEne < 0) {
@@ -112,6 +128,9 @@ Enemy4.prototype.hitDetect = function () { // detects if object is hit by player
     } else if (angleEne > 0 && angleDeg < 0) {
         angleDeg = -angleDeg
     }
+=======
+    var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+>>>>>>> 3dd7e429ac85021499cb168ce55897f16cf0a784
 
     if (frames2 == 1) {
         if (dist(this.x, this.y, player.x, player.y) <= this.h / 2 + 55) { // sword
